@@ -22,11 +22,11 @@ function AllTasks() {
     setShowFilter(false);
   }
 
+
   const tasks = useMemo(() => {
     const filteredItems = data.filter((item) => {
-      if (filter === "" || filter === "all") {
-        return data;
-      }
+      if (filter === "" || filter === "all") return data;
+
       if (
         item.status.includes(filter) ||
         item.tags.includes(filter) ||

@@ -1,8 +1,9 @@
 import enums from "./enum";
 
 export default [
+
   {
-    id: 2222,
+    id: 10000,
     title: "Nog een test story",
     status: enums.status.doing,
     description:
@@ -15,7 +16,7 @@ export default [
     jiraLink: "https://icanhazdadjoke.com/",
   },
   {
-    id: 1111,
+    id: 20000,
     title: "Test story",
     status: enums.status.open,
     description:
@@ -28,7 +29,7 @@ export default [
     jiraLink: "https://icanhazdadjoke.com/",
   },
   {
-    id: 3333,
+    id: 30000,
     title: "Yet another test story",
     status: enums.status.done,
     description:
@@ -42,7 +43,7 @@ export default [
     jiraLink: "https://icanhazdadjoke.com/",
   },
   {
-    id: 4444,
+    id: 40000,
     title: "Laatste test story, I promise",
     status: enums.status.open,
     description:
@@ -52,7 +53,7 @@ export default [
     jiraLink: "https://icanhazdadjoke.com/",
   },
   {
-    id: 5555,
+    id: 50000,
     title: "Psyccchhhhh",
     status: enums.status.done,
     description:
