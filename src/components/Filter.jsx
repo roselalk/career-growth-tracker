@@ -2,6 +2,7 @@
 import "./filter.css";
 import "./item.css";
 import ENUM from "../../enum";
+import star from "../assets/star2.png"
 
 function Filter({ filterByTag }) {
 
@@ -62,6 +63,14 @@ function Filter({ filterByTag }) {
           className="tag all-tag"
         >
           All
+        </h4>
+        <h4
+          onClick={() => {
+            filterByTag("star");
+          }}
+          className="tag star-tag"
+        >
+          <img src={star} alt="" />
         </h4>
         {allStatus}
         {allTags}

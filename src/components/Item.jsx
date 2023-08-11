@@ -1,18 +1,21 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import "./item.css";
+import starFilled from "../assets/star2.png";
 
 function Item({
   firstInArray,
   id,
   title,
   status,
+  star,
   description,
   learningOpportunities,
   tags,
   jiraLink,
 }) {
-  const [showInfo, setShowInfo] = useState(firstInArray ? true : false);
+  const [showInfo, setShowInfo] = useState(true);
+//   const [showInfo, setShowInfo] = useState(firstInArray ? true : false);
 
   function handleClick() {
     setShowInfo(!showInfo);
@@ -37,11 +40,14 @@ function Item({
   return (
     <>
       <div className="item-card" onClick={handleClick}>
-        <h4>
-          <a className="item-id" href={jiraLink}>
-            #{id}
-          </a>
-        </h4>
+        <span className="topline">
+          <h4>
+            <a className="item-id" href={jiraLink}>
+              #{id}
+            </a>
+          </h4>
+          <img src={star === true ? starFilled : ""} alt="" className="star" />
+        </span>
         <h2 className="item-title">{title}</h2>
         <span className="tag-container">
           <h4 className={`tag ch-${status.length} ${status}`}>{status}</h4>
@@ -62,7 +68,6 @@ function Item({
             >
               View this story in Jira
             </a>
-
           </div>
         ) : (
           <div></div>

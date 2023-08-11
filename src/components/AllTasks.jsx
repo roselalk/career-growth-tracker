@@ -28,6 +28,7 @@ function AllTasks() {
       if (filter === "" || filter === "all") return data;
 
       if (
+        (filter === "star" && item.star === true) ||
         item.status.includes(filter) ||
         item.tags.includes(filter) ||
         item.learningOpportunities.includes(filter)
@@ -73,6 +74,7 @@ function AllTasks() {
               id={item.id}
               title={item.title}
               status={item.status}
+              star={item.star}
               description={item.description}
               learningOpportunities={item.learningOpportunities}
               tags={item.tags}
