@@ -1,5 +1,5 @@
 .item-title {
-  color: pink;
+  color: #ffc0cb;
 }
 
 h3 {
@@ -39,6 +39,23 @@ a {
   color: pink;
 }
 
+.star {
+    height: 3rem;
+}
+
+.topline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+/* TAGS */
+
 .tag-container {
   display: flex;
   flex-direction: row;
@@ -59,6 +76,20 @@ a {
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
     width: calc(3ch + 2rem);
+}
+
+.star-tag {
+    background: linear-gradient(-45deg, #a1daa3, #a5d0f6, #e8c2e0, #f2a072);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    width: calc(3ch + 2rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star-tag > img {
+    height: 27px;
 }
 
 @keyframes gradient {
