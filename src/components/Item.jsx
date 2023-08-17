@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "./item.css";
 import starFilled from "../assets/star2.png";
+import Tag from "./UIElements/Tag";
 
 function Item({
   firstInArray,
@@ -14,8 +15,8 @@ function Item({
   tags,
   jiraLink,
 }) {
-  const [showInfo, setShowInfo] = useState(true);
-//   const [showInfo, setShowInfo] = useState(firstInArray ? true : false);
+  // const [showInfo, setShowInfo] = useState(true);
+    const [showInfo, setShowInfo] = useState(firstInArray ? true : false);
 
   function handleClick() {
     setShowInfo(!showInfo);
@@ -23,18 +24,12 @@ function Item({
 
   const allTags = tags.map((tag, index) => {
     return (
-      <h4 key={index} className={`tag ch-${tag.length} ${tag}`}>
-        {tag}
-      </h4>
+      <Tag key={index} classes={`tag ch-${tag.length} ${tag}`} text={tag} />
     );
   });
 
   const learningOpps = learningOpportunities.map((lo, index) => {
-    return (
-      <h4 key={index} className={`tag ch-${lo.length} lo`}>
-        {lo}
-      </h4>
-    );
+    return <Tag key={index} classes={`tag ch-${lo.length} lo`} text={lo} />;
   });
 
   return (
@@ -50,7 +45,7 @@ function Item({
         </span>
         <h2 className="item-title">{title}</h2>
         <span className="tag-container">
-          <h4 className={`tag ch-${status.length} ${status}`}>{status}</h4>
+          <Tag classes={`tag ch-${status.length} ${status}`} text={status}/>
           {allTags}
           {learningOpps}
         </span>
