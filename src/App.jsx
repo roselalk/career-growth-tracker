@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="main-container">
       <Nav />
-      <Dashboard />
+      <AllTasks />
     </div>
   );
 }
